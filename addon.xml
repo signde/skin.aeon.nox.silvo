@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.aeon.nox.silvo" version="10.0.4" name="Aeon Nox: SiLVO" provider-name="SiLVO">
+<addon id="skin.aeon.nox.silvo.signde" version="69.10.0.4" name="Aeon Nox: SiLVO (avdvplus/p3i)" provider-name="SiLVO, jamal2362, signde">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0" />
 		<import addon="script.skinshortcuts" version="2.0.1" />
 		<import addon="script.skinvariables" version="2.1.30" />
 		<import addon="resource.images.studios.white" version="0.0.1" />
 		<import addon="resource.images.recordlabels.white" version="0.0.1" />
+		<import addon="script.signde.tinyppi" version="10.2.7.3" />
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
@@ -100,6 +101,18 @@
 			<screenshot>resources/screenshots/screenshot-11.jpg</screenshot>
 			<screenshot>resources/screenshots/screenshot-12.jpg</screenshot>
 		</assets>
-		<news>[I][COLOR FFFF9800]v10.0.4[/COLOR][/I][CR]- [CR][CR][B]All updates may contain various changes and/or improvements[/B][CR]For a more complete list visit:[CR][I][COLOR FFFF9800]https://github.com/MikeSiLVO/skin.aeon.nox.silvo/commits/master[/COLOR][/I]</news>
+		<news>
+			[I][COLOR FFFF9800]v69.10.0.4[/COLOR][/I][CR]- Assigned the independent skin.aeon.nox.silvo.signde add-on ID to prevent conflicts with upstream releases[CR]- Delegated Player Process Info and playback codec badges to signde PPI[CR]- Added Profile 7 MEL/FEL media flags[CR]- Fixed background video display on the Home screen
+
+			[I][COLOR FFFF9800]v65.10.0.4[/COLOR][/I][CR]- Added an option to hide audio channel-layout artwork
+
+			[I][COLOR FFFF9800]v64.10.0.4[/COLOR][/I][CR]- Improved Atmos and DTS:X detection in library views and OSD information
+
+			[I][COLOR FFFF9800]v63.10.0.4[/COLOR][/I][CR]- Added audio channel-layout artwork and Dolby Vision enhancement-layer indicators from Tiny PPI
+
+			[I][COLOR FFFF9800]v62.10.0.4[/COLOR][/I][CR]- Fixed Dolby Vision L5 active-area offsets in Player Process Info
+
+			[I][COLOR FFFF9800]v61.10.0.4[/COLOR][/I][CR]- Minor PPI fixes
+		</news>
 	</extension>
 </addon>

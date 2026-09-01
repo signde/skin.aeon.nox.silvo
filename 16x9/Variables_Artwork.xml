@@ -324,14 +324,19 @@
 		<value>$INFO[ListItem.VideoCodec,,.png]</value>
 	</variable>
 	<variable name="AudioCodecFlagVar">
-		<value condition="String.Contains(ListItem.Filename,atmos)">atmos.png</value>
-		<value condition="String.Contains(ListItem.Filename,dtsx) | String.Contains(ListItem.Filename,dts-x)">dtsx.png</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,truehd_atmos) | String.IsEqual(ListItem.AudioCodec,eac3_ddp_atmos) | String.Contains(ListItem.FileNameAndPath,atmos)">atmos.png</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma_x) | String.IsEqual(ListItem.AudioCodec,dtshd_ma_x_imax) | String.Contains(ListItem.FileNameAndPath,dtsx) | String.Contains(ListItem.FileNameAndPath,dts-x)">dtsx.png</value>
 		<value>$INFO[ListItem.AudioCodec,,.png]</value>
 	</variable>
 	<variable name="PlayerAudioCodecFlagVar">
-		<value condition="String.Contains(Player.Filename,atmos)">atmos.png</value>
-		<value condition="String.Contains(Player.Filename,dtsx) | String.Contains(Player.Filename,dts-x)">dtsx.png</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd_atmos) | String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos) | String.Contains(Player.FileNameAndPath,atmos)">atmos.png</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x) | String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x_imax) | String.Contains(Player.FileNameAndPath,dtsx) | String.Contains(Player.FileNameAndPath,dts-x)">dtsx.png</value>
 		<value>$INFO[VideoPlayer.AudioCodec,,.png]</value>
+	</variable>
+	<variable name="CustomAudioCodecFlagVar">
+		<value condition="String.IsEqual(Container(4800).ListItem.AudioCodec,truehd_atmos) | String.IsEqual(Container(4800).ListItem.AudioCodec,eac3_ddp_atmos) | String.Contains(Container(4800).ListItem.FileNameAndPath,atmos)">atmos.png</value>
+		<value condition="String.IsEqual(Container(4800).ListItem.AudioCodec,dtshd_ma_x) | String.IsEqual(Container(4800).ListItem.AudioCodec,dtshd_ma_x_imax) | String.Contains(Container(4800).ListItem.FileNameAndPath,dtsx) | String.Contains(Container(4800).ListItem.FileNameAndPath,dts-x)">dtsx.png</value>
+		<value>$INFO[Container(4800).ListItem.AudioCodec,,.png]</value>
 	</variable>
 	<variable name="RatingFlagVar">
 		<value condition="String.IsEqual(ListItem.MPAA,US:NC-17) | String.IsEqual(ListItem.MPAA,USA:NC-17) | String.IsEqual(ListItem.MPAA,Rated NC-17) | String.IsEqual(ListItem.MPAA,NC-17)">Rated_NC-17.png</value>
@@ -611,7 +616,14 @@
 		<value>$INFO[ListItem.Icon,views/list/]</value>
 	</variable>
 	<variable name="HDRFlagsVar">
+		<value condition="Skin.HasSetting(coloredflags) + String.IsEqual(ListItem.HdrType,dolbyvision) + String.StartsWith(ListItem.DvProfile,7.) + String.Contains(ListItem.DvProfile,FEL)">hdr/dolbyvision_fel.png</value>
+		<value condition="Skin.HasSetting(coloredflags) + String.IsEqual(ListItem.HdrType,dolbyvision) + String.StartsWith(ListItem.DvProfile,7.) + String.Contains(ListItem.DvProfile,MEL)">hdr/dolbyvision_mel.png</value>
 		<value condition="!String.IsEmpty(ListItem.HdrType)">$INFO[ListItem.HdrType,hdr/,.png]</value>
 		<value condition="!String.IsEmpty(ListItem.DBID) + !String.IsEmpty(ListItem.VideoResolution)">hdr/sdr.png</value>
+	</variable>
+	<variable name="HDRFlagsContainer4800Var">
+		<value condition="Skin.HasSetting(coloredflags) + String.IsEqual(Container(4800).ListItem.HdrType,dolbyvision) + String.StartsWith(Container(4800).ListItem.DvProfile,7.) + String.Contains(Container(4800).ListItem.DvProfile,FEL)">hdr/dolbyvision_fel.png</value>
+		<value condition="Skin.HasSetting(coloredflags) + String.IsEqual(Container(4800).ListItem.HdrType,dolbyvision) + String.StartsWith(Container(4800).ListItem.DvProfile,7.) + String.Contains(Container(4800).ListItem.DvProfile,MEL)">hdr/dolbyvision_mel.png</value>
+		<value condition="!String.IsEmpty(Container(4800).ListItem.HdrType)">$INFO[Container(4800).ListItem.HdrType,hdr/,.png]</value>
 	</variable>
 </includes>

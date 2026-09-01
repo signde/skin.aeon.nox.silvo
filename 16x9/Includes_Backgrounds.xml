@@ -2,6 +2,7 @@
 <includes>
 	<include name="CommonBackground">
 		<control type="group">
+			<visible>![Player.HasVideo + !Skin.HasSetting(Disable.ShowBackgroundVideo) + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels) + !SlideShow.IsActive]</visible>
 			<animation effect="fade" time="500" delay="300" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="500" condition="!Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="500">WindowClose</animation>
@@ -24,10 +25,6 @@
 		</control>
 		<control type="group">
 			<visible>[Player.HasVideo + !Skin.HasSetting(Disable.ShowBackgroundVideo) + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels) + !SlideShow.IsActive]</visible>
-			<control type="image">
-				<include>FullscreenDimensions</include>
-				<texture>colors/black.png</texture>
-			</control>
 			<control type="videowindow">
 				<include>FullscreenDimensions</include>
 			</control>
@@ -86,7 +83,7 @@
 					<textcolor>grey</textcolor>
 					<font>font_version</font>
 					<align>center</align>
-					<label>$INFO[System.AddonVersion(skin.aeon.nox.silvo),v,]</label>
+					<label>$INFO[System.AddonVersion(skin.aeon.nox.silvo.signde),v,]</label>
 				</control>
 			</control>
 			<control type="image">

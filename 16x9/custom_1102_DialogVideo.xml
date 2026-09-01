@@ -513,7 +513,7 @@
 								<control type="image">
 									<width>160</width>
 									<include>MediaFlagValues</include>
-									<texture>$VAR[MediaFlagsPathVar]/$INFO[Container(4800).ListItem.HdrType,hdr/,.png]</texture>
+									<texture>$VAR[MediaFlagsPathVar]/$VAR[HDRFlagsContainer4800Var]</texture>
 									<visible>!String.IsEmpty(Container(4800).ListItem.HdrType)</visible>
 								</control>
 								<control type="image">
@@ -531,7 +531,7 @@
 								<control type="image">
 									<width>160</width>
 									<include>MediaFlagValues</include>
-									<texture>$VAR[MediaFlagsPathVar]/audiocodec/$INFO[Container(4800).ListItem.AudioCodec,,.png]</texture>
+									<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[CustomAudioCodecFlagVar]</texture>
 									<visible>!String.IsEmpty(Container(4800).ListItem.AudioCodec)</visible>
 								</control>
 								<control type="image">

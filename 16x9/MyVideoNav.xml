@@ -556,7 +556,7 @@
 								<control type="image">
 									<left>388</left>
 									<include>MediaFlagValues</include>
-									<texture>$VAR[MediaFlagsPathVar]/$INFO[ListItem.HdrType,hdr/,.png]</texture>
+									<texture>$VAR[MediaFlagsPathVar]/$VAR[HDRFlagsVar]</texture>
 								</control>
 								<control type="image">
 									<left>388</left>
