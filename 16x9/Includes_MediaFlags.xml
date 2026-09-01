@@ -64,7 +64,7 @@
 			</control>
 			<control type="image">
 				<include>MediaFlagValues</include>
-				<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
+				<texture>$VAR[SigndeAudioCodecFlagVarPath]</texture>
 				<visible>![Container.Content(movies) + Skin.HasSetting(DisableFlag_MovieAudioCodec)]</visible>
 				<visible>![Container.Content(episodes) + Skin.HasSetting(DisableFlag_EpisodeAudioCodec)]</visible>
 			</control>

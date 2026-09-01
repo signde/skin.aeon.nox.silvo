@@ -556,7 +556,7 @@
 								<control type="image">
 									<left>388</left>
 									<include>MediaFlagValues</include>
-									<texture>$VAR[MediaFlagsPathVar]/$INFO[ListItem.HdrType,hdr/,.png]</texture>
+									<texture>$VAR[MediaFlagsPathVar]/$VAR[HDRFlagsVar]</texture>
 								</control>
 								<control type="image">
 									<left>388</left>
@@ -567,7 +567,7 @@
 								<control type="image">
 									<left>1393</left>
 									<include>MediaFlagValues</include>
-									<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
+									<texture>$VAR[SigndeAudioCodecFlagVarPath]</texture>
 								</control>
 								<control type="image">
 									<left>1580</left>
@@ -650,7 +650,7 @@
 							<control type="image">
 								<left>120</left>
 								<include>MediaFlagValues</include>
-								<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
+								<texture>$VAR[SigndeAudioCodecFlagVarPath]</texture>
 							</control>
 							<control type="image">
 								<left>1675</left>

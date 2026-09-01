@@ -588,7 +588,7 @@
 							<width>168</width>
 							<height>80</height>
 							<include>MediaFlagValues</include>
-							<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
+							<texture>$VAR[SigndeAudioCodecFlagVarPath]</texture>
 							<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 						</control>
 						<control type="image">
@@ -640,7 +640,7 @@
 						<control type="image">
 							<width>168</width>
 							<include>MediaFlagValues</include>
-							<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
+							<texture>$VAR[SigndeAudioCodecFlagVarPath]</texture>
 							<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 						</control>
 						<control type="image">

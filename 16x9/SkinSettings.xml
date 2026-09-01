@@ -9,6 +9,7 @@
 	<onunload condition="String.IsEmpty(Skin.String(FanartTimePerImage)) + System.AddonIsEnabled(script.grab.fanart)">RunScript(script.grab.fanart,mode=random,refresh=7)</onunload>
 	<controls>
 		<control type="group">
+			<visible>![Player.HasVideo + !Skin.HasSetting(Disable.ShowBackgroundVideo) + !SlideShow.IsActive]</visible>
 			<animation effect="fade" time="500" delay="400" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="500" condition="!Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="500">WindowClose</animation>
@@ -24,10 +25,6 @@
 		</control>
 		<control type="group">
 			<visible>[Player.HasVideo + !Skin.HasSetting(Disable.ShowBackgroundVideo) + !SlideShow.IsActive]</visible>
-			<control type="image">
-				<include>FullscreenDimensions</include>
-				<texture>colors/black.png</texture>
-			</control>
 			<control type="videowindow">
 				<include>FullscreenDimensions</include>
 			</control>
@@ -56,7 +53,7 @@
 				<textcolor>grey</textcolor>
 				<font>font_version</font>
 				<align>center</align>
-				<label>$INFO[System.AddonVersion(skin.aeon.nox.silvo),v,]</label>
+				<label>$INFO[System.AddonVersion(skin.aeon.nox.silvo.signde),v,]</label>
 			</control>
 			<control type="group">
 				<visible>!Window.IsVisible(dialogcolorpicker)</visible>

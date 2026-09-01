@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: Aeon Nox: SiLVO
-# Addon id: skin.aeon.nox.silvo
+# Addon id: skin.aeon.nox.silvo.signde
 # Addon Provider: SiLVO
 msgid ""
 msgstr ""

@@ -92,7 +92,7 @@
 						<control type="image">
 							<width>100</width>
 							<include>MediaFlagValues</include>
-							<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[PlayerAudioCodecFlagVar]</texture>
+							<texture>$VAR[SigndePlayerAudioCodecFlagVarPath]</texture>
 						</control>
 						<control type="image">
 							<width>100</width>
